@@ -5,6 +5,8 @@
     <title>List Items Todo</title>
   </head>
   <body>
+    <h1>Item List</h1>
+    <a href="/items/add">Add</a>
     <table>
       <thead>
         <tr>
@@ -21,8 +23,8 @@
           <td><%= items[i].id %></td>
           <td><%= items[i].name %></td>
           <td><%= items[i].quantity %></td>
-          <td><%= items[i].CategoryId %></td>
-          <td><%= items[i].actions %></td>
+          <td><%= items[i].Category.name %></td>
+          <td><a href="items/edit/<%= items[i].id %>">Update</a> | <a href="items/delete/<%= items[i].id %>">Delete</a></td>
         </td>
         <% } %>
       </tbody>
